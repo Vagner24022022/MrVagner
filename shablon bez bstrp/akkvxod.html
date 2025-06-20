@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Авторизация</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="my_applications.html">Мой&nbsp;Не&nbsp;Сам</a>
+    <ul class="nav">
+      <li><a href="my_applications.html">Мои заявки</a></li>
+      <li><a href="create_application.html">Создать заявку</a></li>
+      <li><a href="admin_panel.html">Админка</a></li>
+      <li><a class="active" href="akkvxod.html">Выйти</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container py-5">
+  <section class="card" style="max-width:450px; margin:0 auto;">
+    <h2 class="text-center mb-4">Вход в&nbsp;аккаунт</h2>
+
+    <!-- ↓↓↓ изменения: method / action + name-атрибуты -->
+    <form method="post" action="login.php">
+      <div class="mb-3">
+        <label for="login" class="form-label">Логин</label>
+        <input id="login" name="login" class="form-control"
+               placeholder="goida" required minlength="3">
+      </div>
+
+      <div class="mb-4">
+        <label for="pass" class="form-label">Пароль</label>
+        <input type="password" id="pass" name="password"
+               class="form-control" placeholder="******" required minlength="6">
+      </div>
+
+      <button class="btn btn-primary w-100" type="submit">Войти</button>
+    </form>
+
+    <p class="text-center mt-4">
+      <small>Нет аккаунта? <a href="akkreg.html">Регистрация</a></small>
+    </p>
+  </section>
+</main>
+</body>
+</html>

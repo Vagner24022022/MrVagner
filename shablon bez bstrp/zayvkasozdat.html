@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Создать заявку</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="my_applications.html">Мой&nbsp;Не&nbsp;Сам</a>
+    <ul class="nav">
+      <li><a href="my_applications.html">Мои заявки</a></li>
+      <li><a class="active" href="create_application.html">Создать заявку</a></li>
+      <li><a href="admin_panel.html">Админка</a></li>
+      <li><a href="login.html">Выйти</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container py-5">
+  <section class="card" style="max-width:650px; margin:0 auto;">
+    <h2 class="text-center mb-4">Новая заявка</h2>
+
+    <form>
+      <div class="mb-3">
+        <label for="addrInput" class="form-label">Адрес</label>
+        <input id="addrInput" class="form-control"
+               placeholder="Улица, дом, квартира" required minlength="5">
+      </div>
+
+      <div class="mb-3">
+        <label for="phoneInput" class="form-label">Контактный телефон</label>
+        <input id="phoneInput" class="form-control"
+               placeholder="+7 999 123-45-67"
+               title="Начните с +7, затем 10 цифр"
+               pattern="^\+7[\d\s-]{10,14}$" required>
+        <div class="form-text">Пример: +7&nbsp;999&nbsp;123-45-67</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Дата и время</label>
+        <div style="display:flex; gap:1rem;">
+          <input type="date" id="dateInput" class="form-control" required style="flex:1;">
+          <input type="time" id="timeInput" class="form-control" required style="flex:1;">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="serviceSelect" class="form-label">Услуга</label>
+        <select id="serviceSelect" class="form-control" required>
+          <option value="" selected disabled>-- выберите --</option>
+          <option>Общий клининг</option>
+          <option>Генеральная уборка</option>
+          <option>Послестроительная уборка</option>
+          <option>Химчистка ковров и мебели</option>
+          <option>Иная услуга (описать ниже)</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="customService" class="form-label">Описание (если «Иная»)</label>
+        <input id="customService" class="form-control"
+               placeholder="Опишите услугу (необязательно)">
+      </div>
+
+      <div class="mb-4">
+        <span class="form-label">Способ оплаты</span><br>
+        <label><input type="radio" name="pay" checked> Наличные</label>&nbsp;&nbsp;
+        <label><input type="radio" name="pay"> Банковская карта</label>
+      </div>
+
+      <button class="btn btn-success w-100" type="submit">Отправить заявку</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

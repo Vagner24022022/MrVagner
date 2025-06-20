@@ -1,0 +1,27 @@
+:root{
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --accent: #20c997;
+}
+
+body{
+  background: radial-gradient(circle at top left, var(--light) 0%, #e9ecef 100%);
+  min-height: 100vh;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.card{
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.10);
+}
+
+table thead th{
+  white-space: nowrap;
+}
+
+.navbar-brand{
+  letter-spacing: 0.5px;
+}

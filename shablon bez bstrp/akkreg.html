@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Регистрация</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="my_applications.html">Мой&nbsp;Не&nbsp;Сам</a>
+    <ul class="nav">
+      <li><a href="my_applications.html">Мои заявки</a></li>
+      <li><a href="create_application.html">Создать заявку</a></li>
+      <li><a href="admin_panel.html">Админка</a></li>
+      <li><a href="akkvxod.html">Войти</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container py-5">
+  <section class="card" style="max-width:550px; margin:0 auto;">
+    <h2 class="text-center mb-4">Создать аккаунт</h2>
+
+    <!-- ↓↓↓ изменения: method / action + name-атрибуты -->
+    <form method="post" action="register.php">
+      <div class="mb-3">
+        <label for="regLogin" class="form-label">Логин</label>
+        <input id="regLogin" name="login" class="form-control"
+               placeholder="goida" required minlength="3">
+      </div>
+
+      <div class="mb-3">
+        <label for="regPass" class="form-label">Пароль (≥ 6&nbsp;символов)</label>
+        <input type="password" id="regPass" name="password"
+               class="form-control" placeholder="******" required minlength="6">
+      </div>
+
+      <div class="mb-3">
+        <label for="regName" class="form-label">ФИО</label>
+        <input id="regName" name="full_name" class="form-control"
+               placeholder="Иванов Иван Иванович"
+               title="Фамилия Имя Отчество кириллицей, минимум 5 символов"
+               required minlength="5">
+      </div>
+
+      <div class="mb-3">
+        <label for="regPhone" class="form-label">Телефон</label>
+        <input id="regPhone" name="phone" class="form-control"
+               placeholder="+7 999 123-45-67"
+               title="Начните с +7, затем 10 цифр; пробелы/дефисы допускаются"
+               pattern="^\+7[\d\s-]{10,14}$" required>
+        <div class="form-text">Пример: +7&nbsp;999&nbsp;123-45-67</div>
+      </div>
+
+      <div class="mb-4">
+        <label for="regEmail" class="form-label">Электронная почта</label>
+        <input type="email" id="regEmail" name="email"
+               class="form-control" placeholder="ivan@example.com" required>
+      </div>
+
+      <button class="btn btn-success w-100" type="submit">Зарегистрироваться</button>
+    </form>
+
+    <p class="text-center mt-4">
+      <small>Уже есть аккаунт? <a href="akkvxod.html">Войти</a></small>
+    </p>
+  </section>
+</main>
+</body>
+</html>
